@@ -2,14 +2,12 @@ package com.example.hibernatelocaltime;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 
-@SpringBootTest
 public class InstantIssuesIT extends BaseSpringIT {
 
     @Autowired

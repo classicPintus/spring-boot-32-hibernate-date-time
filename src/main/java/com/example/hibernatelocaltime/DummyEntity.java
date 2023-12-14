@@ -20,6 +20,7 @@ public class DummyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+//    @Convert(converter = LocalTimeCustomConverter.class)
     private LocalTime localTime;
     private Instant instant;
     private LocalDateTime localDateTime;

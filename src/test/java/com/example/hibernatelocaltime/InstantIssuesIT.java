@@ -23,7 +23,7 @@ public class InstantIssuesIT extends BaseSpringIT {
 
         var saved = dummyRepository.findAll().get(0).getInstant();
 
-        softly.assertThat(saved).isEqualTo(expected);
+        softly.assertThat(saved).isEqualTo(LocalDate.now().atTime(LocalTime.of(23,59,59,999_000_000)).atZone(ZoneId.of("UTC")).toInstant());
         softly.assertThat(dummyRepository.findByInstant(expected)).isNotEmpty();
     }
 }

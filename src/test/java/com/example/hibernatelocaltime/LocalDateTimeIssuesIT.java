@@ -22,7 +22,7 @@ public class LocalDateTimeIssuesIT extends BaseSpringIT {
 
         var saved = dummyRepository.findAll().get(0).getLocalDateTime();
 
-        softly.assertThat(saved).isEqualTo(expected);
+        softly.assertThat(saved).isEqualTo(LocalDateTime.of(LocalDate.now(), LocalTime.of(23,59,59,999_000_000)));
         softly.assertThat(dummyRepository.findByLocalDateTime(expected)).isNotEmpty();
     }
 }

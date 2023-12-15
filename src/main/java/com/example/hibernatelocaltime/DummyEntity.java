@@ -10,6 +10,7 @@ import lombok.Setter;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZonedDateTime;
 
 @Entity
 @Getter
@@ -20,10 +21,10 @@ public class DummyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-//    @Convert(converter = LocalTimeCustomConverter.class)
     private LocalTime localTime;
     private Instant instant;
     private LocalDateTime localDateTime;
+    private ZonedDateTime zonedDateTime;
 
     @Override
     public boolean equals(Object o) {

@@ -1,1 +1,2 @@
-# spring-boot-32-hibernate-date-time
+# Example of some Hibernate AttributeConverter
+
